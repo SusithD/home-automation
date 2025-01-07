@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { database, ref, onValue, off, set } from "../firebase";
 import SensorInfo from "../components/SensorInfo";
 import ApplianceControl from "../components/ApplianceControl";
-import Navbar from "../components/Navbar";
 
 const Dashboard = () => {
   const [soundValue, setSoundValue] = useState(0);
