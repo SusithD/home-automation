@@ -52,8 +52,7 @@ const Dashboard = () => {
         <h1 className="text-4xl font-extrabold text-center text-blue-500 mb-10">Home Automation Dashboard</h1>
         
         {/* Sensor Information */}
-        <div className="bg-gray-800 p-6 rounded-xl shadow-lg mb-6">
-          <h2 className="text-2xl text-center font-semibold text-gray-200 mb-4">Sensor Readings</h2>
+        <div >
           <SensorInfo 
             soundValue={soundValue} 
             irValue={irValue} 

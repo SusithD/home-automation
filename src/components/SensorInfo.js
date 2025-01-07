@@ -8,6 +8,7 @@ const SensorInfo = ({ soundValue, irValue, gasValue }) => {
 
   return (
     <div className="bg-gray-900 p-6 rounded-lg shadow-lg text-white space-y-6">
+      <h2 className="text-2xl font-bold text-center mb-4">Sensor Dashboard</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Sound Sensor */}
         <div className="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-md">
