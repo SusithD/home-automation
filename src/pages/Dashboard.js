@@ -49,10 +49,21 @@ const Dashboard = () => {
 
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
-      <div className="container mx-auto p-4">
-        <h1 className="text-3xl font-bold text-center mb-8">Home Automation Dashboard</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <SensorInfo soundValue={soundValue} irValue={irValue} gasValue={gasValue} />
+      <div className="container mx-auto p-8">
+        <h1 className="text-4xl font-extrabold text-center text-blue-500 mb-10">Home Automation Dashboard</h1>
+        
+        {/* Sensor Information */}
+        <div className="bg-gray-800 p-6 rounded-xl shadow-lg mb-6">
+          <h2 className="text-2xl text-center font-semibold text-gray-200 mb-4">Sensor Readings</h2>
+          <SensorInfo 
+            soundValue={soundValue} 
+            irValue={irValue} 
+            gasValue={gasValue} 
+          />
+        </div>
+
+        {/* Appliance Controls */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ApplianceControl
             applianceName="LED"
             state={ledState}
@@ -74,6 +85,11 @@ const Dashboard = () => {
             toggle={() => toggleAppliance("acState", acState)}
           />
         </div>
+
+        {/* Footer */}
+        <footer className="mt-12 text-center text-gray-400 text-sm">
+          <p>&copy; 2025 Home Automation System | All Rights Reserved</p>
+        </footer>
       </div>
     </div>
   );
